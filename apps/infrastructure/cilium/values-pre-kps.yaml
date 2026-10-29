@@ -23,7 +23,7 @@ hubble:
   metrics:
     enabled: [dns, drop, tcp, flow, icmp, http]
     serviceMonitor:
-      enabled: true
+      enabled: false
 
 prometheus:
   enabled: true

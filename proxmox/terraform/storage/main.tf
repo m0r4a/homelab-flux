@@ -1,5 +1,5 @@
 module "storage_node" {
-  source = "../../k8s-in-proxmox/terraform/modules/storage_node"
+  source = "git::https://github.com/m0r4a/k8s-in-proxmox.git//terraform/modules/storage_node?ref=3160254f7bdb1bb462d5899117284f3ef92a35c5"
 
   proxmox_node         = var.proxmox_node
   template_vm_id       = var.template_vm_id

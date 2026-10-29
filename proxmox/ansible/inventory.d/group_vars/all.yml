@@ -1,4 +1,5 @@
-# Overrides for the k8s-in-proxmox roles (defaults in proxmox/k8s-in-proxmox/ansible/roles/*/defaults).
+# Overrides for the k8s-in-proxmox roles (defaults in its ansible/roles/*/defaults).
 
-# Cilium values live with the rest of the cluster's GitOps config.
+# Cilium values for the first install, before kube-prometheus-stack brings the
+# ServiceMonitor CRDs. Flux takes over with values.yaml afterwards.
 cilium_values_file: "{{ inventory_dir }}/../../../apps/infrastructure/cilium/values-pre-kps.yaml"

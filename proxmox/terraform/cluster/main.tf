@@ -1,5 +1,5 @@
 module "vm_template" {
-  source = "../../k8s-in-proxmox/terraform/modules/vm_template"
+  source = "git::https://github.com/m0r4a/k8s-in-proxmox.git//terraform/modules/vm_template?ref=3160254f7bdb1bb462d5899117284f3ef92a35c5"
 
   proxmox_node    = var.proxmox_node
   template_vm_id  = var.template_vm_id
@@ -8,7 +8,7 @@ module "vm_template" {
 }
 
 module "k8s_cluster" {
-  source = "../../k8s-in-proxmox/terraform/modules/k8s_cluster"
+  source = "git::https://github.com/m0r4a/k8s-in-proxmox.git//terraform/modules/k8s_cluster?ref=3160254f7bdb1bb462d5899117284f3ef92a35c5"
 
   distribution         = "k3s"
   proxmox_node         = var.proxmox_node
