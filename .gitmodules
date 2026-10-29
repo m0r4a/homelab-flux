@@ -1,0 +1,3 @@
+[submodule "proxmox/k8s-in-proxmox"]
+	path = proxmox/k8s-in-proxmox
+	url = https://github.com/m0r4a/k8s-in-proxmox.git

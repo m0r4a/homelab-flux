@@ -14,8 +14,9 @@
 # Ansible
 **/*.retry
 **/.ansible/
-infrastructure/ansible/roles
-infrastructure/ansible/inventory.ini
+
+# Inventory fragments that Terraform regenerates on every apply
+proxmox/ansible/inventory.d/*.ini
 **/.vault_pass
 **/.vault_pass.txt
 **/*.vault

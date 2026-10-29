@@ -28,7 +28,7 @@ variable "proxmox_insecure" {
 variable "proxmox_ssh_user" {
   description = "SSH user for the Proxmox node."
   type        = string
-  default     = "root"
+  default     = "tfprov"
 
   validation {
     condition     = length(var.proxmox_ssh_user) > 0

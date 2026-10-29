@@ -1,5 +1,5 @@
 module "vm_template" {
-  source = "github.com/m0r4a/k3s-in-proxmox//terraform/modules/vm_template?ref=main"
+  source = "../../k8s-in-proxmox/terraform/modules/vm_template"
 
   proxmox_node    = var.proxmox_node
   template_vm_id  = var.template_vm_id
@@ -7,9 +7,10 @@ module "vm_template" {
   ssh_public_keys = [trimspace(file(pathexpand(var.ssh_public_key)))]
 }
 
-module "k3s_cluster" {
-  source = "github.com/m0r4a/k3s-in-proxmox//terraform/modules/k3s_cluster?ref=main"
+module "k8s_cluster" {
+  source = "../../k8s-in-proxmox/terraform/modules/k8s_cluster"
 
+  distribution         = "k3s"
   proxmox_node         = var.proxmox_node
   template_vm_id       = module.vm_template.template_vm_id
   vm_user              = var.vm_user
