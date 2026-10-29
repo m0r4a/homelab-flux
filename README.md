@@ -1,3 +1,7 @@
+This was my original homelab, using fluxcd and k3s, now that I have more resources I migrate to `kubeadm` and `ArgoCD`
+
+---
+
 ## TODOs
 
 - [ ] Find a way to automatically add the yaml-language-server configs to all files or configure nvim to do so
